@@ -6,7 +6,6 @@ module.exports = {
   description: "Returns bot and API latency in milliseconds.",
   usage: `ping`,
   run: async (client, message, args) => {
-    console.log("Executed.");
     const msg = await message.channel.send("🏓 Pinging...");
 
     const embed = new MessageEmbed()

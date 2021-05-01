@@ -1,7 +1,7 @@
 {
   "name": "Discord.js-Mongodb-setup",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hallel Shapiro (Hallel 🧀#1103)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,6 +15,7 @@
     "chalk": "^4.1.1",
     "common-tags": "^1.8.0",
     "discord.js": "^12.5.3",
+    "moment": "^2.29.1",
     "mongoose": "^5.12.7"
   }
 }

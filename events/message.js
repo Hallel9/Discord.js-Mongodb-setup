@@ -3,7 +3,6 @@ const Guild = require("../models/guild");
 const config = require("../config");
 
 module.exports = async (client, message) => {
-  console.log("executed");
   if (message.author.bot) return;
   if (!message.guild) return;
 
@@ -48,8 +47,8 @@ module.exports = async (client, message) => {
 
   if (cmd.length === 0) return;
 
-  let command = client.commands.get(client.aliases.get(cmd));
-  if (!command) return;
+  let command = client.commands.get(cmd);
+  if (!command) command = client.commands.get(client.aliases.get(cmd));
 
   if (command) {
     command.run(client, message, args, config);
