@@ -15,7 +15,7 @@ module.exports = async (client) => {
         client.commands.set(pull.name, pull);
         table.addRow(file, "✅ Loaded!");
       } else {
-        table.addRow(file, `Command ${file} does not have a name.`);
+        table.addRow(file, ` ❌ Command ${file} does not have a name.`);
         continue;
       }
 

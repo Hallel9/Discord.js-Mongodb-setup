@@ -8,6 +8,7 @@ client.aliases = new Collection();
 client.mongoose = require("./utils/mongo");
 
 client.categories = fs.readdirSync("./commands/");
+client.prefix = config.prefix;
 
 ["command"].forEach((handler) => {
   require(`./handlers/${handler}`)(client);

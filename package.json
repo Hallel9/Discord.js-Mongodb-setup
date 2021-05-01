@@ -11,11 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@iamtraction/google-translate": "^1.1.2",
     "ascii-table": "0.0.9",
     "chalk": "^4.1.1",
     "common-tags": "^1.8.0",
     "discord.js": "^12.5.3",
     "moment": "^2.29.1",
-    "mongoose": "^5.12.7"
+    "mongoose": "^5.12.7",
+    "ms": "^2.1.3"
   }
 }
