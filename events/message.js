@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Guild = require("../models/guild");
 const config = require("../config");
+const Schema = require("../models/commandSchema");
 
 module.exports = async (client, message) => {
   if (message.author.bot) return;
@@ -51,6 +52,13 @@ module.exports = async (client, message) => {
   if (!command) command = client.commands.get(client.aliases.get(cmd));
 
   if (command) {
-    command.run(client, message, args, config);
+    const check = await Schema.findOne({ Guild: message.guild.id });
+    if (check) {
+      if (check.Cmds.includes(command.name))
+        return message.channel.send("This command has been disabled.");
+      command.run(client, message, args, config);
+    } else {
+      command.run(client, message, args, config);
+    }
   }
 };
