@@ -2,6 +2,7 @@ const { Client, Collection } = require("discord.js");
 const config = require("./config");
 const fs = require("fs");
 const client = new Client();
+require("dotenv").config();
 
 client.commands = new Collection();
 client.aliases = new Collection();
